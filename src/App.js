@@ -21,36 +21,42 @@ function App() {
         const editor = grapesJS.init({
             container: "#editor",
             plugins: [
-                gjsBlocksBasic,
-                grapesjsPluginForms,
-                grapesjsComponentCountdown,
-                grapesjsPluginExport,
-                grapesjsTabs,
-                grapesjsCustomCode,
-                grapesjsTouch,
-                grapesjsParserPostcss,
-                grapesjsTooltip,
-                grapesjsTuiImageEditor,
-                grapesjsTyped,
-                grapesjsStyleBg,
-                grapesjsPresetWebpage,
+                gjsBlocksBasic
+                // grapesjsPluginForms,
+                // grapesjsComponentCountdown,
+                // grapesjsPluginExport,
+                // grapesjsTabs,
+                // grapesjsCustomCode,
+                // grapesjsTouch,
+                // grapesjsParserPostcss,
+                // grapesjsTooltip,
+                // grapesjsTuiImageEditor,
+                // grapesjsTyped,
+                // grapesjsStyleBg,
+                // grapesjsPresetWebpage,
             ],
             pluginsOpts: {
-                gjsBlocksBasic : {},
-                grapesjsPluginForms : {},
-                grapesjsComponentCountdown : {},
-                grapesjsPluginExport : {},
-                grapesjsTabs : {},
-                grapesjsCustomCode : {},
-                grapesjsTouch : {},
-                grapesjsParserPostcss : {},
-                grapesjsTooltip : {},
-                grapesjsTuiImageEditor : {},
-                grapesjsTyped : {},
-                grapesjsStyleBg : {},
-                grapesjsPresetWebpage : {},
-            },
+                gjsBlocksBasic : {}
+                // grapesjsPluginForms : {},
+                // grapesjsComponentCountdown : {},
+                // grapesjsPluginExport : {},
+                // grapesjsTabs : {},
+                // grapesjsCustomCode : {},
+                // grapesjsTouch : {},
+                // grapesjsParserPostcss : {},
+                // grapesjsTooltip : {},
+                // grapesjsTuiImageEditor : {},
+                // grapesjsTyped : {},
+                // grapesjsStyleBg : {},
+                // grapesjsPresetWebpage : {},
+            }
         });
+
+        editor.on('update', (some, argument) => {
+            console.log(editor.getHtml())
+            console.log(editor.getCss())
+        })
+
         setEditor(editor);
     }, [])
 
@@ -58,6 +64,7 @@ function App() {
         console.log(editor.getHtml())
         console.log(editor.getCss())
     }
+
     return (
         <div className="App">
             <button onClick={shoot}>Take the shot!</button>
