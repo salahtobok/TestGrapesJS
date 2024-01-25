@@ -56,6 +56,7 @@ function App() {
 
     const shoot = () => {
         console.log(editor.getHtml())
+        console.log(editor.getCss())
     }
     return (
         <div className="App">
