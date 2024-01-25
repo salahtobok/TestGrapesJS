@@ -1,9 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
-
 body {
   margin: 0;
   padding: 0;
 }
+/*
 
 html {
   overflow: scroll;
@@ -92,7 +91,7 @@ html {
   }
 }
 
-/* Theming */
+!* Theming *!
 .gjs-one-bg {
   background-color: #fcf6f5ff;
 }
@@ -135,7 +134,7 @@ html {
   }
 }
 
-/** Error **/
+!** Error **!
 .error {
   .bg-body {
     min-height: 150px;
@@ -156,7 +155,7 @@ html {
   }
 }
 
-/** Assets **/
+!** Assets **!
 .gjs-am-meta,
 .gjs-am-close,
 .gjs-am-file-uploader,
@@ -260,3 +259,4 @@ html {
   opacity: 0;
   cursor: pointer;
 }
+*/
