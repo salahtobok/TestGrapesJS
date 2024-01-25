@@ -21,7 +21,7 @@ function App() {
         const editor = grapesJS.init({
             container: "#editor",
             plugins: [
-                gjsBlocksBasic
+                gjsBlocksBasic,
                 // grapesjsPluginForms,
                 // grapesjsComponentCountdown,
                 // grapesjsPluginExport,
@@ -33,10 +33,10 @@ function App() {
                 // grapesjsTuiImageEditor,
                 // grapesjsTyped,
                 // grapesjsStyleBg,
-                // grapesjsPresetWebpage,
+                grapesjsPresetWebpage,
             ],
             pluginsOpts: {
-                gjsBlocksBasic : {}
+                gjsBlocksBasic : {},
                 // grapesjsPluginForms : {},
                 // grapesjsComponentCountdown : {},
                 // grapesjsPluginExport : {},
@@ -48,7 +48,7 @@ function App() {
                 // grapesjsTuiImageEditor : {},
                 // grapesjsTyped : {},
                 // grapesjsStyleBg : {},
-                // grapesjsPresetWebpage : {},
+                grapesjsPresetWebpage : {},
             }
         });
 
@@ -58,11 +58,15 @@ function App() {
         })
 
         setEditor(editor);
+
+
     }, [])
 
     const shoot = () => {
         console.log(editor.getHtml())
         console.log(editor.getCss())
+        editor.setComponents('<div class="my-element">Hello World!</div>');
+        editor.setStyle('.my-element { color: red; }');
     }
 
     return (
