@@ -53,8 +53,13 @@ function App() {
         });
         setEditor(editor);
     }, [])
+
+    const shoot = () => {
+        console.log(editor.getHtml())
+    }
     return (
         <div className="App">
+            <button onClick={shoot}>Take the shot!</button>
             <div id="editor"></div>
         </div>
     );
